@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de João Pedro Bandeira</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Bem-vindo ao Meu Portfólio</h1>
+            <p>Olá, eu sou João Pedro Bandeira, um desenvolvedor full stack dedicado a criar soluções inovadoras e de
+                impacto. Navegue pelo meu portfólio para ver meus projetos e sinta-se à vontade para entrar em contato!
+            </p>
+            <a href="#sobre" class="btn">Saiba Mais</a>
+        </div>
+    </section>
+
+
+    <main>
+        <section id="sobre" class="about">
+            <h2>Sobre Mim</h2>
+            <div class="about-content">
+                <img src="unnamed.jpg" alt="Foto de João Pedro Bandeira" class="perfil">
+                <div class="about-text">
+                    <p style="text-align: justify;">Com experiência em desenvolvimento web, minha especialidade é criar
+                        soluções robustas e escaláveis que atendem
+                        às necessidades dos clientes e superam expectativas. Sou apaixonado por tecnologia e estou
+                        sempre em busca das melhores
+                        práticas e inovações para garantir a excelência em cada projeto.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="projects">
+            <h2>Projetos</h2>
+            <div class="project-grid">
+                <div class="project">
+                    <h3 style="text-align: center;">Vitality PLUS</h3>
+                    <p style="text-align: justify;">Um sistema de registro nutricional que calcula alimentos diários,
+                        gerencia metas e objetivos com base em
+                        cada usuário.</p>
+                    <a href="vlc-record-2024-06-24-19h34m50s-2024-06-24 19-32-25.mkv-.mp4" target="_blank"
+                        class="video-thumbnail">
+                        <img src="image.png" alt="Thumbnail do Vídeo" />
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </a>
+                    <a href="https://github.com/joaopedro-wq/sakai-ng" target="_blank" class="project-link">Ver
+                        Projeto</a>
+                </div>
+                <!-- Adicione mais projetos conforme necessário -->
+            </div>
+        </section>
+
+
+
+        <section id="habilidades" class="skills">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>TypeScript</li>
+                <li>JavaScript</li>
+                <li>Angular</li>
+                <li>Laravel</li>
+                <li>Node.js</li>
+                <li>PHP</li>
+                <li>SQL</li>
+                <li>Cypress</li>
+            </ul>
+        </section>
+
+        <section id="contato" class="contact">
+            <h2>Contato</h2>
+            <form action="mailto:joao.bandeiraoliveira@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 João Pedro Bandeira. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
