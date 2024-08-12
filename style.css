@@ -187,7 +187,7 @@ section.active {
 }
 .projects {
     background: #1f1f1f;
-    padding: 2rem;
+    padding: 5rem;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 2rem;
@@ -201,95 +201,97 @@ section.active {
 }
 
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem; /* Espaçamento uniforme entre os cartões */
 }
 
 .project {
     background: #333;
-    padding: 1.5rem;
-    border-radius: 5px;
+    padding: 1rem;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, background 0.3s;
+    width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Alinha verticalmente */
+    justify-content: space-between; /* Espaça o conteúdo de forma uniforme */
     position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
 }
 
 .project:hover {
-    transform: translateY(-5px);
-   
+    transform: scale(1.05); /* Aumenta o tamanho do cartão no hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta a sombra no hover */
+}
+
+.project img {
+    width: 100%;
+    height: 150px; /* Altura fixa para consistência */
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .project h3 {
-    color: #1e88e5;
-    margin-bottom: 0.5rem;
+    margin: 1rem 0;
+    color: #5a9cd6;
 }
 
 .project p {
-    color: #b0b0b0;
-    font-size: 1rem;
+    text-align: justify;
     margin-bottom: 1rem;
+    color: #e0e0e0;
 }
 
-.project a {
-    color: #1e88e5;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* .project a:hover {
-    text-decoration: underline;
-} */
-
-.project-link {
-    text-align: center;
-    margin-top: 1rem;
-    margin-left: 5rem;
-   
-    color: #f81212;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background 0.3s;
-}
-
-
-.video-thumbnail {
+.project .video-thumbnail {
     position: relative;
-    display: block;
-    cursor: pointer;
-    border-radius: 5px;
-    overflow: hidden;
-    text-decoration: none;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; /* Espaço entre a thumbnail e o conteúdo abaixo */
 }
 
-.video-thumbnail img {
+.project .video-thumbnail img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 150px; /* Altura fixa para manter a consistência */
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-.play-button {
+.project .play-button {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: rgba(0, 0, 0, 0.6);
     border-radius: 50%;
-    padding: 1rem;
+    padding: 0.5rem;
     color: #fff;
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background 0.3s ease;
 }
 
 .video-thumbnail:hover .play-button {
     background: rgba(0, 0, 0, 0.8);
 }
 
-.skills,
+/* Ajusta o botão "Ver Projeto" */
+.project-link {
+    display: inline-block;
+    background: #244e72; /* Verde para destacar o botão */
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.project-link:hover {
+    background: #244e72; /* Tom mais escuro ao passar o mouse */
+}
+
+
 .contact {
     background: #1f1f1f;
     padding: 2rem;
@@ -305,71 +307,109 @@ section.active {
     margin-bottom: 2rem;
     text-align: center;
 }
+.skills {
+    background: #1f1f1f;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+}
 
-.skills ul {
-    list-style: none;
-    padding: 0;
+.skills h2 {
+    font-size: 2.5rem;
+    color: #e0e0e0;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.skills-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 1rem; /* Espaçamento uniforme entre os cartões */
 }
 
-.skills ul li {
+.skill-card {
     background: #333;
-    margin: 0.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
     color: #e0e0e0;
-    font-size: 1rem;
 }
 
-.contact form {
+.skill-card i {
+    font-size: 3rem;
+    color: #1e88e5;
+    margin-bottom: 1rem;
+}
+
+.skill-card h3 {
+    margin: 1rem 0;
+    color: #5a9cd6;
+    font-size: 1.5rem;
+}
+
+.skill-card p {
+    font-size: 1rem;
+    color: #b0b0b0;
+}
+
+.skill-card:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do cartão no hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta a sombra no hover */
+}/* Estilo para a seção de contato com tema escuro */
+.contact {
+    padding: 5rem;
+    background-color: #333; /* Fundo escuro */
+    color: #fff; /* Texto claro */
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #e0e0e0; /* Cor clara para o título */
+}
+
+.contact p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    color: #b0b0b0; /* Cor um pouco mais escura para o parágrafo */
+}
+
+.social-links {
     display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    /* Ajusta a largura máxima do formulário */
-    margin: 0 auto;
-    /* Centraliza o formulário */
+    justify-content: center;
+    gap: 1rem;
 }
 
-.contact form label {
-    margin-top: 1rem;
-    font-size: 1rem;
-    color: #e0e0e0;
+.social-links a {
+    text-decoration: none;
+    color: #e0e0e0; /* Cor clara para os ícones */
+    font-size: 1.5rem;
+    transition: color 0.3s, transform 0.3s;
 }
 
-.contact form input,
-.contact form textarea {
-    padding: 0.75rem;
-    margin-top: 0.5rem;
-    border: none;
-    border-radius: 5px;
-    background: #333;
-    color: #e0e0e0;
-    font-size: 1rem;
+.social-links a:hover {
+    color: #1da1f2; /* Cor de destaque para LinkedIn */
+    transform: scale(1.1);
 }
 
-.contact form textarea {
-    resize: vertical;
-    min-height: 150px;
-    /* Altura mínima do textarea */
+.social-links a:nth-of-type(2):hover {
+    color: #238b75; /* Cor de destaque para GitHub */
 }
 
-.contact form button {
-    padding: 0.75rem;
-    margin-top: 1rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #1e88e5;
-    color: #e0e0e0;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s;
+.social-links a:nth-of-type(3):hover {
+    color: #e94e77; /* Cor de destaque para Email */
 }
 
-.contact form button:hover {
-    background-color: #1565c0;
+.social-links i {
+    margin-right: 0.5rem;
 }
+
 
 footer {
     background: #1f1f1f;
