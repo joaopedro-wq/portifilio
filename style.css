@@ -422,3 +422,104 @@ footer {
 footer p {
     margin: 0;
 }
+/* Ajuste geral para dispositivos móveis */
+@media (max-width: 767px) {
+    body {
+        font-size: 16px;
+        /* Ajuste o tamanho da fonte para telas menores */
+    }
+
+    header {
+        padding: 0.5rem 0;
+        text-align: left;
+        /* Alinhe o texto à esquerda */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    nav ul li a {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .hero {
+        height: auto;
+        /* Ajuste a altura para se adaptar ao conteúdo */
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        /* Reduza o tamanho do título */
+    }
+
+    .hero p {
+        font-size: 1rem;
+        /* Ajuste o tamanho do texto */
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-content img.perfil {
+        width: 100px;
+        height: 100px;
+    }
+
+    .projects {
+        padding: 2rem;
+    }
+
+    .project {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .project img {
+        height: 120px;
+    }
+
+    .skills-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Ajustes para dispositivos maiores, como tablets e desktops */
+@media (min-width: 768px) {
+    .hero {
+        height: 100vh;
+        /* Mantenha a altura completa para telas maiores */
+    }
+
+    .project {
+        width: 300px;
+    }
+}
+section {
+    padding: 2rem;
+    margin: 1rem 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
